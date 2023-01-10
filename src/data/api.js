@@ -3,7 +3,7 @@ import axios from 'axios';
 const TMDB_KEY = 'e5b8bd1b82d4f5b68280cf1e2b92e5f6';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
-export const getTrendingFilmsList = async () => {
+export const getTrendingFilms = async () => {
   const {
     data: { results },
   } = await axios.get(`/trending/movie/week?api_key=${TMDB_KEY}`);
@@ -15,12 +15,12 @@ export const getMovieByTextQuery = async textQuery => {
   } = await axios.get(`/search/movie?api_key=${TMDB_KEY}&query=${textQuery}&page=1`);
   return results.map(({ title, id }) => ({ title, id }));
 };
-export const getMovieInfoById = async id => {
+export const getMovieDetails = async id => {
   const { data } = await axios.get(`/movie/${id}?api_key=${TMDB_KEY}`);
   const { poster_path, title, release_date, vote_average, overview, genres } = data;
   return { poster_path, title, release_date, vote_average, overview, genres };
 };
-export const getMovieCast = async id => {
+export const getMovieCredits = async id => {
   const { data } = await axios.get(`/movie/${id}/credits?api_key=${TMDB_KEY}`);
   return data.cast.map(({ profile_path, name, character }) => ({
     profile_path,

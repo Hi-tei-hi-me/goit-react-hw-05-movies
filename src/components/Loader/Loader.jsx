@@ -10,6 +10,7 @@ export const Loader = () => {
       ariaLabel="watch-loading"
       wrapperStyle={{
         position: 'absolute',
+        zIndex: '1000',
         left: '50%',
         top: '50%',
         transform: 'translate(-50%,-50%)',
