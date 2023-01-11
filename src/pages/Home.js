@@ -5,7 +5,7 @@ import { FilmsList } from 'components/FilmsList/FilmsList';
 import { Loader } from 'components/Loader/Loader';
 import { Error } from 'utils/Error/Error';
 
-export const Home = () => {
+export default function Home() {
   const [moviesList, setMoviesList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -33,4 +33,4 @@ export const Home = () => {
       {error && <Error />}
     </main>
   );
-};
+}

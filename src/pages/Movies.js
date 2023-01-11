@@ -7,7 +7,7 @@ import { Loader } from 'components/Loader/Loader';
 import { showToast } from 'utils/Toasts/toaster';
 import { Error } from 'utils/Error/Error';
 
-export const Movies = () => {
+export default function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [moviesList, setMoviesList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -47,4 +47,4 @@ export const Movies = () => {
       {error && <Error />}
     </main>
   );
-};
+}

@@ -6,7 +6,7 @@ import { Return } from 'components/Return/Return';
 import { Loader } from 'components/Loader/Loader';
 import { Error } from 'utils/Error/Error';
 
-export const MovieDetails = () => {
+export default function MovieDetails() {
   const location = useLocation();
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
@@ -38,4 +38,4 @@ export const MovieDetails = () => {
       </Suspense>
     </main>
   );
-};
+}

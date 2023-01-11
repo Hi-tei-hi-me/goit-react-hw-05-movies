@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
-import { ListedFilm } from './FilmsList.styled';
+import { ListedFilm } from 'components/ListedFilm/ListedFilm';
+import { ListOfFilms } from './FilmsList.styled';
 
 export const FilmsList = ({ films }) => {
   return (
-    <ul>
+    <ListOfFilms>
       {films.map(({ id, title }) => {
         return <ListedFilm key={id} id={id} title={title} />;
       })}
-    </ul>
+    </ListOfFilms>
   );
 };
 
