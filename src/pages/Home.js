@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import * as API from 'data/api';
 import { FilmsList } from 'components/FilmsList/FilmsList';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'utils/Loader/Loader';
 import { Error } from 'utils/Error/Error';
 
 export default function Home() {

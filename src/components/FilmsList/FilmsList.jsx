@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { ListedFilm } from 'components/ListedFilm/ListedFilm';
 import { ListOfFilms } from './FilmsList.styled';
+import { ListedFilm } from 'components/ListedFilm/ListedFilm';
 
 export const FilmsList = ({ films }) => {
   return (

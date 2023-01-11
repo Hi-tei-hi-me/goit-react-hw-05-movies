@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import * as API from 'data/api';
 import { Searchbar } from 'components/Searchbar/Searchbar';
 import { FilmsList } from 'components/FilmsList/FilmsList';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'utils/Loader/Loader';
 import { showToast } from 'utils/Toasts/toaster';
 import { Error } from 'utils/Error/Error';
 

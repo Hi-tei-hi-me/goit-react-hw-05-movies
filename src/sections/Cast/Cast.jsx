@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import * as API from 'data/api';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'utils/Loader/Loader';
 import { showToast } from 'utils/Toasts/toaster';
 import { Error } from 'utils/Error/Error';
 

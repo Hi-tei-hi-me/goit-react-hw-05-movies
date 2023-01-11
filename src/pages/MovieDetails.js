@@ -2,8 +2,8 @@ import { useEffect, useState, Suspense } from 'react';
 import { useLocation, useParams, Outlet } from 'react-router-dom';
 import * as API from 'data/api';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
-import { Return } from 'components/Return/Return';
-import { Loader } from 'components/Loader/Loader';
+import { Return } from 'utils/Return/Return';
+import { Loader } from 'utils/Loader/Loader';
 import { Error } from 'utils/Error/Error';
 
 export default function MovieDetails() {
