@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { BackLink } from './Return.styled';
-import { GiReturnArrow } from 'react-icons/gi';
+import { IoArrowUndoSharp } from 'react-icons/io5';
 
 export const Return = ({ to, children }) => {
   return (
     <BackLink to={to}>
-      <GiReturnArrow size={20} />
+      <IoArrowUndoSharp size={25} />
       {children}
     </BackLink>
   );
