@@ -7,6 +7,8 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
+  position: sticky;
+  top: 0;
   margin-right: -15px;
   margin-left: -15px;
   padding-top: 10px;

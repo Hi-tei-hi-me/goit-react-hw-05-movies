@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
   return (
     <main>
-      <h1>Films trending today</h1>
+      <h1>Trending today</h1>
       {isLoading && <Loader />}
       {moviesList.length > 0 && <FilmsList films={moviesList} />}
       {error && <Error />}
