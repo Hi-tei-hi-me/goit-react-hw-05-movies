@@ -5,10 +5,14 @@ export const ErrorMsg = styled.p`
   width: max-content;
   max-width: 95vw;
   padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   text-align: center;
   line-height: 1.71;
-  background-color: #aa3939;
-  color: #ffaaaa;
-  border: 1.5px solid #801515;
+  background-color: lightgray;
+  border: 2px solid black;
   border-radius: 10px;
 `;
