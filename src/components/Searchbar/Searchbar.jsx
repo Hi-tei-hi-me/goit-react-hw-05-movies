@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Header, SearchForm, SearchBtn, SearchBtnLabel, SearchFormInput } from './Searchbar.styled';
+import { SearchForm, SearchBtn, SearchBtnLabel, SearchFormInput } from './Searchbar.styled';
 import { showToast } from 'utils/Toasts/toaster';
 
 export const Searchbar = ({ onSubmit }) => {
@@ -16,24 +16,22 @@ export const Searchbar = ({ onSubmit }) => {
     if (textQuery.trim().toLowerCase() === '') {
       return showToast('You should enter keyword if you want to find something', 'incorrectQuery');
     }
-    onSubmit({ textQuery });
+    onSubmit(textQuery);
     reset();
   };
   return (
-    <Header>
-      <SearchForm onSubmit={handleSubmit}>
-        <SearchFormInput
-          type="text"
-          autoFocus
-          autocomplete="off"
-          placeholder="Search images of..."
-          value={textQuery}
-          onChange={handleChange}
-        />
-        <SearchBtn type="submit">
-          <SearchBtnLabel>Search</SearchBtnLabel>
-        </SearchBtn>
-      </SearchForm>
-    </Header>
+    <SearchForm onSubmit={handleSubmit}>
+      <SearchFormInput
+        type="text"
+        autoFocus
+        autocomplete="off"
+        placeholder="Looking for..."
+        value={textQuery}
+        onChange={handleChange}
+      />
+      <SearchBtn type="submit">
+        <SearchBtnLabel>Search</SearchBtnLabel>
+      </SearchBtn>
+    </SearchForm>
   );
 };
