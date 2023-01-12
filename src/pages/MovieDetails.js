@@ -29,7 +29,7 @@ export default function MovieDetails() {
   const ReturnHref = location.state?.from ?? '/';
   return (
     <main>
-      <Return to={ReturnHref}>Back to movies</Return>
+      <Return to={ReturnHref}>Go back</Return>
       {isLoading && <Loader />}
       {movie && <MovieInfo movie={movie} />}
       {error && <Error />}

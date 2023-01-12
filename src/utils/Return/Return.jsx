@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { BackLink } from './Return.styled';
+import { GiReturnArrow } from 'react-icons/gi';
 
 export const Return = ({ to, children }) => {
   return (
     <BackLink to={to}>
-      Back
+      <GiReturnArrow size={20} />
       {children}
     </BackLink>
   );
