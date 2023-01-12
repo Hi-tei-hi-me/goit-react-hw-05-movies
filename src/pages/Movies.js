@@ -35,8 +35,7 @@ export default function Movies() {
     fetchFilms();
   }, [searchParams, textQuery]);
   const onSubmit = query => {
-    const normalizedQuery = query.searchQuery.trim().toLowerCase();
-    setSearchParams(normalizedQuery !== '' ? { normalizedQuery } : {});
+    setSearchParams(query !== '' ? { query } : {});
     setMoviesList([]);
   };
   return (

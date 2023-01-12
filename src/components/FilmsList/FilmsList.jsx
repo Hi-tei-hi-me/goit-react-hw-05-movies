@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { BsFillSuitHeartFill } from 'react-icons/bs';
 import { ListOfFilms } from './FilmsList.styled';
 import { ListedFilm } from 'components/ListedFilm/ListedFilm';
 
@@ -8,6 +9,7 @@ export const FilmsList = ({ films }) => {
       {films.map(({ id, title }) => {
         return <ListedFilm key={id} id={id} title={title} />;
       })}
+      <BsFillSuitHeartFill size={25} />
     </ListOfFilms>
   );
 };

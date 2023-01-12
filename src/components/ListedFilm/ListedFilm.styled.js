@@ -9,7 +9,7 @@ export const Item = styled.li`
   background-color: rgba(255, 255, 255, 0.4);
   &:hover a,
   &:focus a {
-    text-shadow: 1px 1px 3px #950606;
+    text-shadow: 2px 2px 4px #950606;
   }
 `;
 

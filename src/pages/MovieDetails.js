@@ -31,7 +31,7 @@ export default function MovieDetails() {
     <main>
       <Return to={ReturnHref}>Back to movies</Return>
       {isLoading && <Loader />}
-      {movie && <MovieInfo film={movie} />}
+      {movie && <MovieInfo movie={movie} />}
       {error && <Error />}
       <Suspense fallback={<Loader />}>
         <Outlet />

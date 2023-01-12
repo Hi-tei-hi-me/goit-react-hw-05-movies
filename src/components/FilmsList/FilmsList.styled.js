@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const ListOfFilms = styled.ul`
+export const ListOfFilms = styled.ol`
   display: flex;
   flex-direction: column;
   align-items: center;

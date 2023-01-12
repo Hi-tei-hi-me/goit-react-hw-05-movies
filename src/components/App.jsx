@@ -12,7 +12,7 @@ const Reviews = lazy(() => import('../sections/Reviews/Reviews'));
 export const App = () => {
   return (
     <>
-      <Toaster position="top-right" reverseOrder={false} />
+      <Toaster position="top-left" reverseOrder={false} />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
