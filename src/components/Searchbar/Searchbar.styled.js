@@ -10,7 +10,7 @@ export const SearchFormInput = styled.input`
   padding: 10px 15px;
   margin-right: 10px;
   border: 2px solid lightgray;
-  border-radius: 8px;
+  border-radius: 4px;
   &::placeholder {
   }
 `;
@@ -23,7 +23,7 @@ export const SearchBtn = styled.button`
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
     0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   border: 2px solid rgb(149, 20, 25, 0.3);
-  border-radius: 8px;
+  border-radius: 4px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {

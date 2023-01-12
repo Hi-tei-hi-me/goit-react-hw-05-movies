@@ -5,6 +5,7 @@ const toastConfig = {
   incorrectQuery: {
     icon: <GiSkullInJar size={40} />,
     style: {
+      color: 'black',
       background: 'lightgray',
     },
   },

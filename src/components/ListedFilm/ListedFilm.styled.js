@@ -5,7 +5,7 @@ export const Item = styled.li`
   width: 100%;
   padding: 5px;
   border-radius: 5px;
-  text-align: center;
+  text-align: left;
   background-color: rgba(255, 255, 255, 0.4);
   &:hover a,
   &:focus a {
