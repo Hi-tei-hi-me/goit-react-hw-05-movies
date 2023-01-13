@@ -1,9 +1,16 @@
 import toast from 'react-hot-toast';
-import { GiSkullInJar } from 'react-icons/gi';
+import { GiSkullInJar, GiChoppedSkull } from 'react-icons/gi';
 
 const toastConfig = {
   incorrectQuery: {
     icon: <GiSkullInJar size={40} />,
+    style: {
+      color: 'black',
+      background: 'lightgray',
+    },
+  },
+  noInfo: {
+    icon: <GiChoppedSkull size={40} />,
     style: {
       color: 'black',
       background: 'lightgray',

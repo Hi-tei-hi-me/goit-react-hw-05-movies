@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import * as API from 'data/api';
+import { ActorsList, ActorInfo } from './Cast.styled';
 import { Loader } from 'utils/Loader/Loader';
 import { showToast } from 'utils/Toasts/toaster';
 import { Error } from 'utils/Error/Error';
@@ -15,6 +16,9 @@ export default function Cast() {
       try {
         setIsLoading(true);
         const actors = await API.getMovieCredits(movieId);
+        if (!actors.length) {
+          return showToast(`Sorry, we couldn't find any info`, 'noInfo');
+        }
         setCast(actors);
         setError('');
       } catch (error) {
@@ -25,27 +29,33 @@ export default function Cast() {
     };
     fetchActors();
   }, [movieId]);
-
   return (
     <>
       {isLoading && <Loader />}
       {cast.length > 0 && (
-        <ul>
+        <ActorsList>
           {cast.map(({ profile_path: profilePath, name, character }) => (
-            <li key={name}>
-              <p>{name}</p>
+            <ActorInfo key={name}>
               <img
-                src={profilePath !== null ? `https://image.tmdb.org/t/p/w500/${profilePath}` : ''}
-                alt={name}
-                width="70"
-                height="100"
+                src={
+                  profilePath !== null
+                    ? `https://image.tmdb.org/t/p/w500/${profilePath}`
+                    : 'assets/defaultIMG.png'
+                }
+                alt="Oops!"
               />
-              <p>Character: {character}</p>
-            </li>
+              <div>
+                <p>{name}</p>
+                <p>
+                  Character:
+                  <br />
+                  {character}
+                </p>
+              </div>
+            </ActorInfo>
           ))}
-        </ul>
+        </ActorsList>
       )}
-      {cast.length === 0 && showToast(`Sorry, we couldn't find any info`, 'nothingFound')}
       {error && <Error />}
     </>
   );
