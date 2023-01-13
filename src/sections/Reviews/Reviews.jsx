@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import * as API from 'data/api';
+import { ListOfReviews, Review } from './Reviews.styled';
 import { Loader } from 'utils/Loader/Loader';
 import { showToast } from 'utils/Toasts/toaster';
 import { Error } from 'utils/Error/Error';
@@ -14,8 +15,12 @@ export default function Reviews() {
     const fetchReviews = async () => {
       try {
         setIsLoading(true);
-        const response = await API.getMovieReviews(movieId);
-        setReviews(response);
+        const reviews = await API.getMovieReviews(movieId);
+        if (!reviews.length) {
+          return showToast(`There are no reviews yet. Do you wanna be the first?`, 'noReviews');
+        }
+        setReviews(reviews);
+        showToast(`Here's what people say about this film`, 'reviewsFound');
         setError('');
       } catch (error) {
         setError(error.message);
@@ -30,19 +35,18 @@ export default function Reviews() {
     <>
       {isLoading && <Loader />}
       {reviews.length > 0 && (
-        <ul>
+        <ListOfReviews>
           {reviews.map(({ author, content }) => (
-            <li key={author}>
+            <Review key={author}>
               <p>
                 <b>Author: </b>
                 {author}
               </p>
               <p>{content}</p>
-            </li>
+            </Review>
           ))}
-        </ul>
+        </ListOfReviews>
       )}
-      {reviews.length === 0 && showToast(`Sorry, we couldn't find any info`, 'nothingFound')}
       {error && <Error />}
     </>
   );

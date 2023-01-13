@@ -1,5 +1,5 @@
 import toast from 'react-hot-toast';
-import { GiSkullInJar, GiSurprisedSkull, GiPirateSkull } from 'react-icons/gi';
+import { GiSkullInJar, GiSurprisedSkull, GiGooSkull, GiPirateSkull } from 'react-icons/gi';
 
 const toastConfig = {
   incorrectQuery: {
@@ -11,6 +11,13 @@ const toastConfig = {
   },
   noCastInfo: {
     icon: <GiSurprisedSkull size={40} />,
+    style: {
+      color: 'black',
+      background: 'silver',
+    },
+  },
+  reviewsFound: {
+    icon: <GiGooSkull size={40} />,
     style: {
       color: 'black',
       background: 'silver',
