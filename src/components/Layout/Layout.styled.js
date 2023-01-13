@@ -2,16 +2,16 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 18px;
+  padding-left: 18px;
   padding-bottom: 40px;
 `;
 
 export const Header = styled.header`
   position: sticky;
   top: 0;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -18px;
+  margin-left: -18px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 2px solid gray;

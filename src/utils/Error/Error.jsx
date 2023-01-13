@@ -1,5 +1,5 @@
 import { ErrorMsg } from './Error.styled';
-import defaultIMG from '../../assets/defaultIMG.png';
+import defaultIMG from 'assets/defaultIMG.png';
 
 export const Error = ({ textError }) => {
   return (
