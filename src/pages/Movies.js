@@ -22,9 +22,10 @@ export default function Movies() {
         setIsLoading(true);
         const films = await API.getMovieByTextQuery(textQuery);
         setMoviesList(films);
-        if (!films.data.length) {
-          return showToast(`Sorry, we couldn't find any ${textQuery}`, 'nothingFound');
+        if (!films.length) {
+          return showToast(`Sorry, we couldn't find anything upon your request`, 'nothingFound');
         }
+        showToast(`Look, how many cool movies we found for you!`, 'filmsFound');
         setError('');
       } catch (error) {
         setError(error.message);
@@ -35,7 +36,13 @@ export default function Movies() {
     fetchFilms();
   }, [searchParams, textQuery]);
   const onSubmit = query => {
-    setSearchParams(query !== '' ? { query } : {});
+    if (query.trim().toLowerCase() === textQuery) {
+      return showToast(
+        `There is nothing new for you, but you can try to find some another film`,
+        'repeatedQuery'
+      );
+    }
+    setSearchParams({ query });
     setMoviesList([]);
   };
   return (
