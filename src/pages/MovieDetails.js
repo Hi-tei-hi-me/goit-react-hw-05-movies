@@ -36,6 +36,7 @@ export default function MovieDetails() {
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
+      <Return to={ReturnHref}>Go back</Return>
     </main>
   );
 }
