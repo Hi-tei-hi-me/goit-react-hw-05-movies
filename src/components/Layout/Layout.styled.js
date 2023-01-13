@@ -12,8 +12,8 @@ export const Header = styled.header`
   top: 0;
   margin-right: -18px;
   margin-left: -18px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 23px;
+  padding-bottom: 23px;
   border-bottom: 2px solid gray;
   background: linear-gradient(to left, #bdc3c7, #2c3e50);
   color: white;

@@ -17,7 +17,10 @@ export default function Reviews() {
         setIsLoading(true);
         const reviews = await API.getMovieReviews(movieId);
         if (!reviews.length) {
-          return showToast(`There are no reviews yet. Do you wanna be the first?`, 'noReviews');
+          return showToast(
+            `No one has left a review yet. If you want, yours can be first`,
+            'noReviews'
+          );
         }
         setReviews(reviews);
         showToast(`Here's what people say about this film`, 'reviewsFound');
