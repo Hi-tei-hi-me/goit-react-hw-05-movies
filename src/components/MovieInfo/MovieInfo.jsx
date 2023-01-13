@@ -1,49 +1,55 @@
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Container, MovieContainer } from './MovieInfo.styled';
+import { Container, PosterContainer, AddInfoList, AddInfoOption } from './MovieInfo.styled';
 
 export const MovieInfo = ({ movie }) => {
   const location = useLocation();
   const { title, overview, poster_path, vote_average, genres, release_date } = movie;
   const releaseDate = release_date.slice(0, 4);
-  const posterPath = poster_path !== null ? `https://image.tmdb.org/t/p/w500/${poster_path}` : '';
+  const posterPath =
+    poster_path !== null
+      ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+      : 'assets/defaultIMG.png';
   const voteAverage = vote_average.toFixed(0) * 10;
   const genresList =
     genres.length > 0 ? genres.map(({ name }) => name).join(', ') : 'No information';
   const ReturnHref = location.state?.from ?? '/';
-
   return (
     <>
       <Container>
-        <MovieContainer>
-          <img src={posterPath} alt={title} width="500" height="700" />
-        </MovieContainer>
+        <PosterContainer>
+          <img src={posterPath} alt={title} />
+        </PosterContainer>
         <div>
           <h2>
             {title} ({releaseDate})
           </h2>
           <p>
-            User Score: <span>{voteAverage}%</span>{' '}
+            User Score: <span>{voteAverage}%</span>
           </p>
-          <b>Overview:</b>
-          <p>{overview}</p>
-          <b>Genres:</b>
-          <p>{genresList}</p>
+          <span>
+            <b>Overview:</b>
+            <p>{overview}</p>
+          </span>
+          <span>
+            <b>Genres:</b>
+            <p>{genresList}</p>
+          </span>
         </div>
       </Container>
-      <p>Additional information</p>
-      <ul>
-        <li>
+      <h3>Additional information</h3>
+      <AddInfoList>
+        <AddInfoOption>
           <Link to="cast" state={{ from: ReturnHref }}>
             Cast
           </Link>
-        </li>
-        <li>
+        </AddInfoOption>
+        <AddInfoOption>
           <Link to="reviews" state={{ from: ReturnHref }}>
             Reviews
           </Link>
-        </li>
-      </ul>
+        </AddInfoOption>
+      </AddInfoList>
     </>
   );
 };

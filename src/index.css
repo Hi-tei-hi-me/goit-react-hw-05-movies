@@ -73,3 +73,17 @@ h1 {
   margin-bottom: 15px;
   text-shadow: 2px 2px 5px silver;
 }
+
+h2 {
+  vertical-align: middle;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px silver;
+}
+
+h3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  vertical-align: middle;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px silver;
+}
