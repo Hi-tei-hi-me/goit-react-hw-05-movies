@@ -1,15 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Container, PosterContainer, AddInfoList, AddInfoOption } from './MovieInfo.styled';
+import defaultIMG from 'assets/defaultIMG.png';
 
 export const MovieInfo = ({ movie }) => {
   const location = useLocation();
   const { title, overview, poster_path, vote_average, genres, release_date } = movie;
   const releaseDate = release_date.slice(0, 4);
-  const posterPath =
-    poster_path !== null
-      ? `https://image.tmdb.org/t/p/w500/${poster_path}`
-      : 'assets/defaultIMG.png';
+  const posterPath = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : defaultIMG;
   const voteAverage = vote_average.toFixed(0) * 10;
   const genresList =
     genres.length > 0 ? genres.map(({ name }) => name).join(', ') : 'No information';
@@ -25,7 +23,7 @@ export const MovieInfo = ({ movie }) => {
             {title} ({releaseDate})
           </h2>
           <p>
-            User Score: <span>{voteAverage}%</span>
+            User Score: <b>{voteAverage}%</b>
           </p>
           <span>
             <b>Overview:</b>

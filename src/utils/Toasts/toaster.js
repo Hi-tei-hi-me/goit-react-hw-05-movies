@@ -11,49 +11,49 @@ import {
 
 const toastConfig = {
   incorrectQuery: {
-    icon: <GiSkullInJar size={40} />,
+    icon: <GiSkullInJar size={40} color="#9c0a21" />,
     style: {
       color: 'black',
       background: 'silver',
     },
   },
   repeatedQuery: {
-    icon: <GiSkullCrossedBones size={40} />,
+    icon: <GiSkullCrossedBones size={40} color="#9c0a21" />,
     style: {
       color: 'black',
       background: 'silver',
     },
   },
   filmsFound: {
-    icon: <GiHappySkull size={40} />,
+    icon: <GiHappySkull size={40} color="#9c0a21" />,
     style: {
       color: 'black',
       background: 'silver',
     },
   },
   nothingFound: {
-    icon: <GiChewedSkull size={40} />,
+    icon: <GiChewedSkull size={40} color="#9c0a21" />,
     style: {
       color: 'black',
       background: 'silver',
     },
   },
   noCastInfo: {
-    icon: <GiSurprisedSkull size={40} />,
+    icon: <GiSurprisedSkull size={40} color="#9c0a21" />,
     style: {
       color: 'black',
       background: 'silver',
     },
   },
   reviewsFound: {
-    icon: <GiGooSkull size={40} />,
+    icon: <GiGooSkull size={40} color="#9c0a21" />,
     style: {
       color: 'black',
       background: 'silver',
     },
   },
   noReviews: {
-    icon: <GiPirateSkull size={40} />,
+    icon: <GiPirateSkull size={40} color="#9c0a21" />,
     style: {
       color: 'black',
       background: 'silver',
