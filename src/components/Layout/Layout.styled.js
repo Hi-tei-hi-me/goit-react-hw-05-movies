@@ -12,10 +12,10 @@ export const Header = styled.header`
   top: 0;
   margin-right: -15px;
   margin-left: -15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-bottom: 2px solid gray;
-  background-color: #2c3e50;
+  background: linear-gradient(to left, #bdc3c7, #2c3e50);
   color: white;
   & nav {
     display: flex;
