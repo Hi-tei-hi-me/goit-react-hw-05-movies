@@ -33,7 +33,7 @@ export const AddInfoList = styled.ul`
 
 export const AddInfoOption = styled.li`
   padding: 5px 0px;
-  color: inherit;
+  color: #9c0309;
   text-transform: uppercase;
   border-radius: 4px;
   text-decoration: none;

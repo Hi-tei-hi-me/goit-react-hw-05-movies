@@ -1,19 +1,26 @@
 import toast from 'react-hot-toast';
-import { GiSkullInJar, GiChoppedSkull } from 'react-icons/gi';
+import { GiSkullInJar, GiSurprisedSkull, GiPirateSkull } from 'react-icons/gi';
 
 const toastConfig = {
   incorrectQuery: {
     icon: <GiSkullInJar size={40} />,
     style: {
       color: 'black',
-      background: 'lightgray',
+      background: 'silver',
     },
   },
-  noInfo: {
-    icon: <GiChoppedSkull size={40} />,
+  noCastInfo: {
+    icon: <GiSurprisedSkull size={40} />,
     style: {
       color: 'black',
-      background: 'lightgray',
+      background: 'silver',
+    },
+  },
+  noReviews: {
+    icon: <GiPirateSkull size={40} />,
+    style: {
+      color: 'black',
+      background: 'silver',
     },
   },
 };

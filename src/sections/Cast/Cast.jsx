@@ -17,7 +17,7 @@ export default function Cast() {
         setIsLoading(true);
         const actors = await API.getMovieCredits(movieId);
         if (!actors.length) {
-          return showToast(`Sorry, we couldn't find any info`, 'noInfo');
+          return showToast(`Sorry, we couldn't find anything about actors cast`, 'noCastInfo');
         }
         setCast(actors);
         setError('');
