@@ -1,10 +1,10 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useLocation, useParams, Outlet } from 'react-router-dom';
-import * as API from 'data/api';
+import * as API from 'utils/api';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
-import { Return } from 'utils/Return/Return';
-import { Loader } from 'utils/Loader/Loader';
-import { Error } from 'utils/Error/Error';
+import { Return } from 'components/reusable/Return/Return';
+import { Loader } from 'components/reusable/Loader/Loader';
+import { Error } from 'components/reusable/Error/Error';
 
 export default function MovieDetails() {
   const location = useLocation();

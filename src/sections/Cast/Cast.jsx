@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import * as API from 'data/api';
+import * as API from 'utils/api';
 import { ActorsList, ActorInfo } from './Cast.styled';
-import { Loader } from 'utils/Loader/Loader';
-import { showToast } from 'utils/Toasts/toaster';
-import { Error } from 'utils/Error/Error';
+import { Loader } from 'components/reusable/Loader/Loader';
+import { showToast } from 'components/reusable/Toasts/toaster';
+import { Error } from 'components/reusable/Error/Error';
 import defaultIMG from 'assets/defaultIMG.png';
 
 export default function Cast() {

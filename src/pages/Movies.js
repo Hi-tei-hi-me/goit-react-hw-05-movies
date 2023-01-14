@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import * as API from 'data/api';
+import * as API from 'utils/api';
 import { Searchbar } from 'components/Searchbar/Searchbar';
 import { FilmsList } from 'components/FilmsList/FilmsList';
-import { Loader } from 'utils/Loader/Loader';
-import { showToast } from 'utils/Toasts/toaster';
-import { Error } from 'utils/Error/Error';
+import { Loader } from 'components/reusable/Loader/Loader';
+import { showToast } from 'components/reusable/Toasts/toaster';
+import { Error } from 'components/reusable/Error/Error';
 
 export default function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();

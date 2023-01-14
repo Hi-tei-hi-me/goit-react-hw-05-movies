@@ -1,6 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Container, PosterContainer, AddInfoList, AddInfoOption } from './MovieInfo.styled';
+import {
+  Container,
+  PosterContainer,
+  RatingColorizer,
+  AddInfoList,
+  AddInfoOption,
+} from './MovieInfo.styled';
 import defaultIMG from 'assets/defaultIMG.png';
 
 export const MovieInfo = ({ movie }) => {
@@ -9,6 +15,20 @@ export const MovieInfo = ({ movie }) => {
   const releaseDate = release_date.slice(0, 4);
   const posterPath = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : defaultIMG;
   const voteAverage = vote_average.toFixed(0) * 10;
+  const getColor = () => {
+    if (voteAverage > 0 && voteAverage <= 60) {
+      return 'red';
+    }
+    if (voteAverage > 60 && voteAverage <= 85) {
+      return 'orange';
+    }
+    if (voteAverage > 85 && voteAverage <= 97) {
+      return 'green';
+    }
+    if (voteAverage > 97) {
+      return 'pink';
+    }
+  };
   const genresList =
     genres.length > 0 ? genres.map(({ name }) => name).join(', ') : 'No information';
   const ReturnHref = location.state?.from ?? '/';
@@ -23,7 +43,7 @@ export const MovieInfo = ({ movie }) => {
             {title} ({releaseDate})
           </h2>
           <p>
-            User Score: <b>{voteAverage}%</b>
+            User Score: <RatingColorizer variant={getColor()}>{voteAverage}%</RatingColorizer>
           </p>
           <span>
             <b>Overview:</b>

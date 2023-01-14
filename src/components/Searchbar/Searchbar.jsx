@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SearchForm, SearchBtn, SearchBtnLabel, SearchFormInput } from './Searchbar.styled';
-import { showToast } from 'utils/Toasts/toaster';
+import { showToast } from 'components/reusable/Toasts/toaster';
 
 export const Searchbar = ({ onSubmit }) => {
   const [textQuery, setTextQuery] = useState('');

@@ -11,6 +11,7 @@ export const SearchFormInput = styled.input`
   margin-right: 10px;
   border: 2px solid lightgray;
   border-radius: 4px;
+  line-height: 1.7;
   &::placeholder {
   }
 `;
