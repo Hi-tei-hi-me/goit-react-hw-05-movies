@@ -7,14 +7,14 @@ import {
   AddInfoList,
   AddInfoOption,
 } from './MovieInfo.styled';
-import defaultIMG from 'assets/defaultIMG.png';
+import noInfoIMG from 'assets/noInfoIMG.png';
 
 export const MovieInfo = ({ movie }) => {
   const location = useLocation();
   const { title, overview, poster_path, vote_average, genres, release_date } = movie;
-  const releaseDate = release_date.slice(0, 4);
-  const posterPath = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : defaultIMG;
-  const voteAverage = vote_average.toFixed(0) * 10;
+  const releaseDate = release_date ? release_date.slice(0, 4) : 'date unknown';
+  const posterPath = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : noInfoIMG;
+  const voteAverage = (vote_average * 10).toFixed(1);
   const getColor = () => {
     if (voteAverage > 0 && voteAverage <= 60) {
       return 'red';
@@ -43,7 +43,7 @@ export const MovieInfo = ({ movie }) => {
             {title} ({releaseDate})
           </h2>
           <p>
-            User Score: <RatingColorizer variant={getColor()}>{voteAverage}%</RatingColorizer>
+            User Score: <RatingColorizer variant={getColor()}>{voteAverage}</RatingColorizer>
           </p>
           <span>
             <b>Overview:</b>

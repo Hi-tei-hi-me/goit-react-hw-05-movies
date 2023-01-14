@@ -5,7 +5,7 @@ import { ActorsList, ActorInfo } from './Cast.styled';
 import { Loader } from 'components/reusable/Loader/Loader';
 import { showToast } from 'components/reusable/Toasts/toaster';
 import { Error } from 'components/reusable/Error/Error';
-import defaultIMG from 'assets/defaultIMG.png';
+import noInfoIMG from 'assets/noInfoIMG.png';
 
 export default function Cast() {
   const { movieId } = useParams();
@@ -38,7 +38,7 @@ export default function Cast() {
           {cast.map(({ profile_path: profilePath, name, character }) => (
             <ActorInfo key={name}>
               <img
-                src={profilePath ? `https://image.tmdb.org/t/p/w500/${profilePath}` : defaultIMG}
+                src={profilePath ? `https://image.tmdb.org/t/p/w500/${profilePath}` : noInfoIMG}
                 alt="Oops!"
               />
               <div>

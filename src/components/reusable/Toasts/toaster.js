@@ -14,49 +14,49 @@ const toastConfig = {
     icon: <GiSkullInJar size={40} color="#9c0a21" />,
     style: {
       color: 'black',
-      background: 'silver',
+      background: 'rgba(218, 212, 212, 0.7)',
     },
   },
   repeatedQuery: {
     icon: <GiSkullCrossedBones size={40} color="#9c0a21" />,
     style: {
       color: 'black',
-      background: 'silver',
+      background: 'rgba(218, 212, 212, 0.7)',
     },
   },
   filmsFound: {
     icon: <GiHappySkull size={40} color="#9c0a21" />,
     style: {
       color: 'black',
-      background: 'silver',
+      background: 'rgba(218, 212, 212, 0.7)',
     },
   },
   nothingFound: {
     icon: <GiChewedSkull size={40} color="#9c0a21" />,
     style: {
       color: 'black',
-      background: 'silver',
+      background: 'rgba(218, 212, 212, 0.7)',
     },
   },
   noCastInfo: {
     icon: <GiSurprisedSkull size={40} color="#9c0a21" />,
     style: {
       color: 'black',
-      background: 'silver',
+      background: 'rgba(218, 212, 212, 0.7)',
     },
   },
   reviewsFound: {
     icon: <GiGooSkull size={40} color="#9c0a21" />,
     style: {
       color: 'black',
-      background: 'silver',
+      background: 'rgba(218, 212, 212, 0.7)',
     },
   },
   noReviews: {
     icon: <GiPirateSkull size={40} color="#9c0a21" />,
     style: {
       color: 'black',
-      background: 'silver',
+      background: 'rgba(218, 212, 212, 0.7)',
     },
   },
 };
