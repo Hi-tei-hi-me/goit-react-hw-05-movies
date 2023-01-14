@@ -32,7 +32,8 @@ export const RatingColorizer = styled.b`
   text-align: center;
   width: 44px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-right: 1px;
+  padding-bottom: 11px;
   border-radius: 50%;
   border: 2.5px solid;
   ${prop => {

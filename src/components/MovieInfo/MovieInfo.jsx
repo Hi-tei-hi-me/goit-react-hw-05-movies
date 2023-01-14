@@ -14,7 +14,8 @@ export const MovieInfo = ({ movie }) => {
   const { title, overview, poster_path, vote_average, genres, release_date } = movie;
   const releaseDate = release_date ? release_date.slice(0, 4) : 'date unknown';
   const posterPath = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : noInfoIMG;
-  const voteAverage = (vote_average * 10).toFixed(1);
+  const voteAverage =
+    vote_average === 10 ? (vote_average * 10).toFixed(0) : (vote_average * 10).toFixed(1);
   const getColor = () => {
     if (voteAverage > 0 && voteAverage <= 60) {
       return 'red';
